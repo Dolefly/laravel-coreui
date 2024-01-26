@@ -1,7 +1,10 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\DoctorController;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\RolesController;
+use App\Http\Controllers\PermissionsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -46,6 +49,7 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
         /**
          * User Routes
          */
+        Route::resource('doctors',DoctorController::class);
         Route::group(['prefix' => 'users'], function() {
             Route::get('/', [App\Http\Controllers\UsersController::class, 'index'])->name('users.index');
             Route::get('/create', 'UsersController@create')->name('users.create');
