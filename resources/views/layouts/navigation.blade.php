@@ -11,15 +11,23 @@
     <li class="nav-item">
         <a class="nav-link {{ request()->is('users*') ? 'active' : ''}}" href="{{ route('users.index') }}">
             <svg class="nav-icon">
-                <use xlink:href="{{ asset('icons/coreui.svg#cil-user') }}"></use>
+                <use xlink:href="{{ asset('icons/coreui.svg#cil-clock') }}"></use>
             </svg>
             {{ __('Appointments') }}
+        </a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="/patient" target="_top">
+            <svg class="nav-icon">
+                <use xlink:href="{{ asset('icons/coreui.svg#cil-note-add') }}"></use>
+            </svg>
+            Admission
         </a>
     </li>
     <li class="nav-group" aria-expanded="false">
         <a class="nav-link nav-group-toggle" href="#">
             <svg class="nav-icon">
-                <use xlink:href="{{ asset('icons/coreui.svg#cil-star') }}"></use>
+                <use xlink:href="{{ asset('icons/coreui.svg#cil-shield-alt') }}"></use>
             </svg>
             Security
         </a>
@@ -46,33 +54,41 @@
     <li class="nav-group" aria-expanded="false">
         <a class="nav-link nav-group-toggle" href="#">
             <svg class="nav-icon">
-                <use xlink:href="{{ asset('icons/coreui.svg#cil-star') }}"></use>
+                <use xlink:href="{{ asset('icons/coreui.svg#cil-group') }}"></use>
             </svg>
-            Personel
+            Staff
         </a>
         <ul class="nav-group-items" style="height: 0px;">
             <li class="nav-item">
                 <a class="nav-link" href="/doctors" target="_top">
                     <svg class="nav-icon">
-                        <use xlink:href="{{ asset('icons/coreui.svg#cil-bug') }}"></use>
+                        <use xlink:href="{{ asset('icons/coreui.svg#cil-healing') }}"></use>
                     </svg>
-                    Physician
+                    Doctor(s)
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#" target="_top">
+                <a class="nav-link" href="/nurses" target="_top">
                     <svg class="nav-icon">
-                        <use xlink:href="{{ asset('icons/coreui.svg#cil-bug') }}"></use>
+                        <use xlink:href="{{ asset('icons/coreui.svg#cil-medical-cross') }}"></use>
                     </svg>
                     Nurses
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#" target="_top">
+                <a class="nav-link" href="/subs" target="_top">
                     <svg class="nav-icon">
-                        <use xlink:href="{{ asset('icons/coreui.svg#cil-bug') }}"></use>
+                        <use xlink:href="{{ asset('icons/coreui.svg#cil-tags') }}"></use>
                     </svg>
                     Sub-ordinate
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/technicians" target="_top">
+                    <svg class="nav-icon">
+                        <use xlink:href="{{ asset('icons/coreui.svg#cil-fork') }}"></use>
+                    </svg>
+                    Technicians
                 </a>
             </li>
         </ul>
@@ -88,7 +104,7 @@
             <li class="nav-item">
                 <a class="nav-link" href="#" target="_top">
                     <svg class="nav-icon">
-                        <use xlink:href="{{ asset('icons/coreui.svg#cil-bug') }}"></use>
+                        <use xlink:href="{{ asset('icons/coreui.svg#cil-drop') }}"></use>
                     </svg>
                     Laboratory
                 </a>
@@ -96,7 +112,7 @@
             <li class="nav-item">
                 <a class="nav-link" href="#" target="_top">
                     <svg class="nav-icon">
-                        <use xlink:href="{{ asset('icons/coreui.svg#cil-bug') }}"></use>
+                        <use xlink:href="{{ asset('icons/coreui.svg#cil-leaf') }}"></use>
                     </svg>
                     Pharmacy
                 </a>
@@ -104,11 +120,54 @@
             <li class="nav-item">
                 <a class="nav-link" href="#" target="_top">
                     <svg class="nav-icon">
-                        <use xlink:href="{{ asset('icons/coreui.svg#cil-bug') }}"></use>
+                        <use xlink:href="{{ asset('icons/coreui.svg#cil-lightbulb') }}"></use>
                     </svg>
                     X-Ray
                 </a>
             </li>
         </ul>
+    </li>
+    <li class="nav-group" aria-expanded="false">
+        <a class="nav-link nav-group-toggle" href="#">
+            <svg class="nav-icon">
+                <use xlink:href="{{ asset('icons/coreui.svg#cil-hospital') }}"></use>
+            </svg>
+            Hospital
+        </a>
+        <ul class="nav-group-items" style="height: 0px;">
+            <li class="nav-item">
+                <a class="nav-link" href="/administration" target="_top">
+                    <svg class="nav-icon">
+                        <use xlink:href="{{ asset('icons/coreui.svg#cil-drop') }}"></use>
+                    </svg>
+                    Administration
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#" target="_top">
+                    <svg class="nav-icon">
+                        <use xlink:href="{{ asset('icons/coreui.svg#cil-settings') }}"></use>
+                    </svg>
+                    Settings
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#" target="_top">
+                    <svg class="nav-icon">
+                        <use xlink:href="{{ asset('icons/coreui.svg#cil-lightbulb') }}"></use>
+                    </svg>
+                    More..
+                </a>
+            </li>
+        </ul>
+    </li>
+    <hr>
+    <li class="nav-item">
+        <a class="nav-link" href="#" target="_top">
+            <svg class="nav-icon">
+                <use xlink:href="{{ asset('icons/coreui.svg#cil-info') }}"></use>
+            </svg>
+            About
+        </a>
     </li>
 </ul>

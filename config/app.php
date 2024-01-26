@@ -199,7 +199,7 @@ return [
 
         // Bilas newly included
         Spatie\Permission\PermissionServiceProvider::class,
-        Barryvdh\Debugbar\ServiceProvider::class,
+        //Barryvdh\Debugbar\ServiceProvider::class,
 
     ],
 
@@ -219,6 +219,6 @@ return [
     ])->toArray(),
 
     // Bilas newly included
-    'Debugbar' => Barryvdh\Debugbar\Facades\Debugbar::class,
+   // 'Debugbar' => Barryvdh\Debugbar\Facades\Debugbar::class,
 
 ];

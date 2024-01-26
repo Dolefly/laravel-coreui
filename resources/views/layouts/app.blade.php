@@ -14,9 +14,18 @@
         @endif
     </title>
     <meta name="theme-color" content="#ffffff">
+    <!-- Remember to include jQuery :) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+
+    <!-- jQuery Modal -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+    
+
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" /> -->
     @stack('before-styles')
     @vite('resources/sass/app.scss')
     @stack('after-styles')
+    @livewireStyles
 </head>
 
 <body>
@@ -54,14 +63,17 @@
 
     <!-- Scripts -->
     @stack('before-scripts')
-
+    <script src="{{ asset('modal/modal.js')}}"></script>
     <script src="{{ asset('js/jquery.min.js') }}"></script>
     <script src="{{ asset('js/coreui.bundle.min.js') }}"></script>
     @vite('resources/js/app.js')
 
     @stack('after-scripts')
     <!-- / Scripts -->
+    @livewireScripts
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
+    <x-livewire-alert::scripts />
 </body>
 
 </html>
